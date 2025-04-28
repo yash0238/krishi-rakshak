@@ -10,54 +10,72 @@ Built with accessibility in mind (default language Marathi 🇮🇳), the app br
 It’s not just for farmers — it’s for everyone living in rural areas who depend on plants and livestock for livelihood.
 
 🎯 Key Features
+
 🌱 AI-Powered Disease Detection: Upload or capture images of crops and animals to instantly diagnose issues.
+
 🗣️ Multi-language Support: Marathi (default), Hindi, English.
-☀️ Weather Integration: Predict disease outbreaks and plan btter.
+
+☀️ Weather Integration: Predict disease outbreaks and plan better.
+
 🩺 Expert Consultation: Connect with local agricultural and veterinary specialists.
+
 📚 Learning Hub: Access video tutorials, farming guides, and disease prevention strategies.
+
 🌎 Offline Support: Basic diagnosis available even without internet.
+
 🔄 Community Forum: Farmers and rural users can share experiences and remedies.
+
 📊 Farm Management: Personalized farm advice based on user data.
+
 🔔 Real-time Alerts: Location-based disease and weather updates.
-🛠️ Tech Stack
 
 
-📲 App Wireframe (Highlights)
-Home Screen:
-    Crop & Animal sections
-    Weather widget
-    Live Updates: Scan and Diagnose
-Disease Details Page:
-    Symptoms
-    Remedies
-    Prevention tips
-Forum & Marketplace:
-    Discussions
-    Treatments/Fertilizers marketplace (planned)
 
 🧩 Architecture Overview
-![image](https://github.com/user-attachments/assets/2c49d630-cf21-44df-b304-d869ff1232e9)
+![image](https://github.com/user-attachments/assets/7a858de7-ca16-4a35-8542-a2afece61f72)
+
 API Request to Backend (Flask/Django)
+
 AI Model Inference (Disease Prediction)
+
 Response with Diagnosis + Remedies
+
 Optional Consultation/Forum Interaction
 
 🎯 Vision and Impact
 Primary SDGs Aligned:
-    SDG 2: Zero Hunger
-    SDG 3: Good Health and Well-Being
-    SDG 9: Industry, Innovation, and Infrastructure
-    SDG 12: Responsible Consumption and Production
+
+SDG 2: Zero Hunger
+
+SDG 3: Good Health and Well-Being
+
+SDG 9: Industry, Innovation, and Infrastructure
+
+SDG 12: Responsible Consumption and Production
 
 Goal:
 Help rural families improve yield, reduce livestock losses, and sustain their livelihoods using affordable, cutting-edge technology.
 
+📈 Current Status
+✅ Core idea finalized
+
+✅ Wireframes designed
+
+🔄 Model training (in progress)
+
+🔄 Flutter app development (MVP stage)
+
+🔄 Backend API development
 
 🧠 Future Roadmap
 Add voice assistance for accessibility.
+
 Expand disease database (more crops, more livestock).
+
 Add live weather prediction models.
+
 Beta test with rural communities.
+
 Launch app on Google Play Store.
 
 🤝 Contribution
