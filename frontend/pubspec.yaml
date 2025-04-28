@@ -1,0 +1,72 @@
+name: krishi_rakshak
+description: AI-powered plant and animal disease diagnosis app for rural farmers
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# App version info
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.16.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.17.0
+  
+  # UI Components
+  cupertino_icons: ^1.0.2
+  
+  # HTTP and API
+  http: ^0.13.4
+  
+  # Image handling
+  image_picker: ^0.8.5
+  
+  # Location and Weather
+  location: ^4.4.0
+  
+  # Storage
+  shared_preferences: ^2.0.15
+  
+  # Accessibility
+  flutter_tts: ^3.3.3
+  
+  # URL handling
+  url_launcher: ^6.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
+
+# Flutter configuration
+flutter:
+  # Material Design
+  uses-material-design: true
+  
+  # Enable generation of localized strings
+  generate: true
+  
+  # Assets
+  # assets:
+  #   - assets/images/
+  #   - assets/icons/
+  
+  # Fonts
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Poppins-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 600

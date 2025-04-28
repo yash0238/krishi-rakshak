@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Leaf Blight",
+    "type": "plant",
+    "symptoms": "Yellow to brown patches on leaves, leaf edges becoming dry and brittle, leaf tips turning brown, overall wilting of the plant.",
+    "remedy": "Remove infected leaves, ensure proper spacing between plants for air circulation, avoid overhead watering, apply copper-based fungicides if necessary."
+  },
+  {
+    "name": "Powdery Mildew",
+    "type": "plant",
+    "symptoms": "White powdery spots on leaves and stems, stunted growth, distorted leaves, premature leaf drop, reduced yield.",
+    "remedy": "Increase air circulation around plants, avoid overhead watering, apply neem oil or sulfur-based fungicides, remove and destroy infected plant parts."
+  },
+  {
+    "name": "Aphid Infestation",
+    "type": "plant",
+    "symptoms": "Curled or distorted leaves, sticky residue on leaves (honeydew), presence of small green, black or white insects on stems and leaf undersides, stunted growth.",
+    "remedy": "Spray plants with strong water jet to dislodge aphids, introduce beneficial insects like ladybugs, apply insecticidal soap or neem oil, remove heavily infested parts."
+  },
+  {
+    "name": "Root Rot",
+    "type": "plant",
+    "symptoms": "Wilting despite adequate water, yellowing leaves, stunted growth, soft, brown roots that may have foul odor, plant collapse.",
+    "remedy": "Improve soil drainage, reduce watering frequency, remove affected plants, apply fungicide as soil drench, sterilize containers before replanting."
+  },
+  {
+    "name": "Foot and Mouth Disease",
+    "type": "animal",
+    "symptoms": "Fever, blisters on mouth, feet, and teats, excessive salivation, lameness, reduced appetite, weight loss, reduced milk production in dairy animals.",
+    "remedy": "Isolate infected animals, provide soft food and clean water, clean affected areas with antiseptic solution, administer pain relief and anti-inflammatory medication, contact veterinarian immediately."
+  },
+  {
+    "name": "Mastitis",
+    "type": "animal",
+    "symptoms": "Swollen, red, hot, painful udder, abnormal milk (watery, flaky, or bloody), fever, reduced appetite, decreased milk production.",
+    "remedy": "Regularly milk out affected quarters, apply warm compresses, administer antibiotics as prescribed by veterinarian, provide clean bedding, isolate infected animals."
+  },
+  {
+    "name": "Newcastle Disease",
+    "type": "animal",
+    "symptoms": "Respiratory distress, greenish diarrhea, depression, lack of appetite, twisted neck (torticollis), paralysis, decreased egg production, tremors.",
+    "remedy": "Vaccination is the best prevention, isolate sick birds, improve sanitation, administer supportive care, provide clean water and well-ventilated housing."
+  },
+  {
+    "name": "Bloat",
+    "type": "animal",
+    "symptoms": "Swollen left abdomen, discomfort and pain, rapid breathing, excessive salivation, inability to belch, collapse in severe cases.",
+    "remedy": "Keep animal standing, administer anti-bloat medication as prescribed by veterinarian, use stomach tube to release gas, in emergency situations perform trocarization, modify diet to prevent recurrence."
+  }
+]

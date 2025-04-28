@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none">
+  <rect width="512" height="512" fill="#FFF3E0"/>
+  <text x="256" y="256" font-family="Segoe UI, Arial, sans-serif" font-size="24px" fill="#8D6E63" text-anchor="middle" dominant-baseline="middle">Animal Disease Image</text>
+  <!-- Simplified cow outline -->
+  <path d="M128 240C128 213.49 149.49 192 176 192H336C362.51 192 384 213.49 384 240V336C384 353.67 369.67 368 352 368H160C142.33 368 128 353.67 128 336V240Z" stroke="#8D6E63" stroke-width="4" fill="none"/>
+  <!-- Head -->
+  <path d="M176 192C149.49 192 128 213.49 128 240V272C128 245.49 149.49 224 176 224H336C362.51 224 384 245.49 384 272V240C384 213.49 362.51 192 336 192H176Z" stroke="#8D6E63" stroke-width="4" fill="none"/>
+  <!-- Disease spots -->
+  <circle cx="208" cy="256" r="16" fill="#EF5350"/>
+  <circle cx="304" cy="256" r="16" fill="#EF5350"/>
+  <circle cx="256" cy="320" r="16" fill="#EF5350"/>
+</svg>

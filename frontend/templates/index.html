@@ -1,0 +1,260 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <!-- Login/Signup Screen -->
+    <div id="auth-screen" class="screen">
+        <div class="auth-header">
+            <h1 data-i18n="createAccount">Create New Account</h1>
+        </div>
+        
+        <div class="form-container">
+            <div class="form-group">
+                <label for="name" data-i18n="name">NAME</label>
+                <input type="text" id="name" class="form-control" data-i18n-placeholder="name">
+            </div>
+            
+            <div class="form-group">
+                <label for="email" data-i18n="email">EMAIL</label>
+                <input type="email" id="email" class="form-control" data-i18n-placeholder="email">
+            </div>
+            
+            <div class="form-group">
+                <label for="password" data-i18n="password">PASSWORD</label>
+                <input type="password" id="password" class="form-control" data-i18n-placeholder="password">
+            </div>
+            
+            <div class="form-group">
+                <label for="dob" data-i18n="dateOfBirth">DATE OF BIRTH</label>
+                <input type="date" id="dob" class="form-control">
+            </div>
+            
+            <button class="btn btn-primary btn-block" data-navigate="home" data-i18n="signup">Sign up</button>
+        </div>
+        
+        <div class="auth-switch">
+            <p><span data-i18n="alreadyRegistered">Already Registered? </span><a href="#" data-navigate="login" data-i18n="login">Log in here</a></p>
+        </div>
+        
+        <div class="language-selector">
+            <button class="language-btn active" data-lang="en">English</button>
+            <button class="language-btn" data-lang="hi">हिंदी</button>
+            <button class="language-btn" data-lang="mr">मराठी</button>
+        </div>
+    </div>
+
+    <!-- Home Screen -->
+    <div id="home-screen" class="screen" style="display: none;">
+        <div class="header">
+            <div class="logo">
+                <h1 data-i18n="appTitle">कृषि रक्षक</h1>
+            </div>
+            <div class="nav-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        
+        <div class="weather-widget">
+            <div class="weather-icon">
+                <i class="fas fa-cloud-sun fa-2x"></i>
+            </div>
+            <div class="weather-info">
+                <h3 class="weather-location">Pune, Maharashtra</h3>
+                <p class="weather-temp">32°C</p>
+                <p class="weather-desc">Partly Cloudy</p>
+            </div>
+        </div>
+        
+        <div class="home-options">
+            <div class="option-card" data-navigate="plant-prediction">
+                <img src="{{ url_for('static', filename='images/plant.svg') }}" alt="Plant Disease">
+                <h3 data-i18n="plantDisease">Plant Disease</h3>
+            </div>
+            <div class="option-card" data-navigate="animal-prediction">
+                <img src="{{ url_for('static', filename='images/animal.svg') }}" alt="Animal Disease">
+                <h3 data-i18n="animalDisease">Animal Disease</h3>
+            </div>
+            <div class="option-card" data-navigate="forum">
+                <i class="fas fa-comments fa-3x" style="color: var(--primary-color);"></i>
+                <h3 data-i18n="forum">Forum</h3>
+            </div>
+            <div class="option-card" data-navigate="profile">
+                <i class="fas fa-history fa-3x" style="color: var(--primary-color);"></i>
+                <h3 data-i18n="viewHistory">View History</h3>
+            </div>
+        </div>
+        
+        <!-- Calendar Widget -->
+        <div class="calendar">
+            <div class="calendar-day">1</div>
+            <div class="calendar-day">2</div>
+            <div class="calendar-day">3</div>
+            <div class="calendar-day">4</div>
+            <div class="calendar-day">5</div>
+            <div class="calendar-day">6</div>
+            <div class="calendar-day">7</div>
+        </div>
+        
+        <div class="language-selector">
+            <button class="language-btn active" data-lang="en">English</button>
+            <button class="language-btn" data-lang="hi">हिंदी</button>
+            <button class="language-btn" data-lang="mr">मराठी</button>
+        </div>
+    </div>
+
+    <!-- Predict Disease Screen - Plant -->
+    <div id="plant-prediction-screen" class="screen" style="display: none;">
+        <div class="header">
+            <div class="back-button" data-navigate="home">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+            <div class="page-title">
+                <h2 data-i18n="plantDisease">Plant Disease</h2>
+            </div>
+            <div></div> <!-- Empty div for flexbox spacing -->
+        </div>
+        
+        <div class="upload-container">
+            <div class="upload-box">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <p data-i18n="uploadImage">Upload Image</p>
+                <input type="file" id="image-upload" accept="image/*" style="display: none;">
+            </div>
+            
+            <img class="preview-image" style="display: none;" alt="Preview">
+            
+            <button class="btn btn-primary detect-btn" style="display: none;" onclick="predictDisease('plant')">
+                <i class="fas fa-search"></i> <span data-i18n="detectDisease">Detect Disease</span>
+            </button>
+        </div>
+        
+        <div class="prediction-result"></div>
+    </div>
+
+    <!-- Predict Disease Screen - Animal -->
+    <div id="animal-prediction-screen" class="screen" style="display: none;">
+        <div class="header">
+            <div class="back-button" data-navigate="home">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+            <div class="page-title">
+                <h2 data-i18n="animalDisease">Animal Disease</h2>
+            </div>
+            <div></div> <!-- Empty div for flexbox spacing -->
+        </div>
+        
+        <div class="upload-container">
+            <div class="upload-box">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <p data-i18n="uploadImage">Upload Image</p>
+                <input type="file" id="image-upload" accept="image/*" style="display: none;">
+            </div>
+            
+            <img class="preview-image" style="display: none;" alt="Preview">
+            
+            <button class="btn btn-primary detect-btn" style="display: none;" onclick="predictDisease('animal')">
+                <i class="fas fa-search"></i> <span data-i18n="detectDisease">Detect Disease</span>
+            </button>
+        </div>
+        
+        <div class="prediction-result"></div>
+    </div>
+
+    <!-- Disease Info Screen -->
+    <div id="disease-info-screen" class="screen" style="display: none;">
+        <div class="header">
+            <div class="back-button" data-navigate="home">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+            <div class="page-title">
+                <h2 data-i18n="diseaseInfo">Disease Information</h2>
+            </div>
+            <div></div> <!-- Empty div for flexbox spacing -->
+        </div>
+        
+        <div class="disease-details-container"></div>
+    </div>
+
+    <!-- Forum Screen -->
+    <div id="forum-screen" class="screen" style="display: none;">
+        <div class="header">
+            <div class="logo">
+                <h1 data-i18n="forum">Forum</h1>
+            </div>
+            <div class="create-post-btn" data-navigate="create-post">
+                <i class="fas fa-plus"></i>
+            </div>
+        </div>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="Search forum posts..." data-i18n-placeholder="search">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        
+        <div class="forum-posts-container"></div>
+    </div>
+
+    <!-- Create Post Screen -->
+    <div id="create-post-screen" class="screen" style="display: none;">
+        <div class="header">
+            <div class="back-button" data-navigate="forum">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+            <div class="page-title">
+                <h2 data-i18n="createPost">Create Post</h2>
+            </div>
+            <div></div> <!-- Empty div for flexbox spacing -->
+        </div>
+        
+        <div class="form-container">
+            <div class="form-group">
+                <label for="post-title" data-i18n="postTitle">Title</label>
+                <input type="text" id="post-title" class="form-control" placeholder="Enter a title for your post">
+            </div>
+            
+            <div class="form-group">
+                <label for="post-content" data-i18n="postContent">Content</label>
+                <textarea id="post-content" class="form-control" rows="5" placeholder="Share your farming question or experience..."></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="post-author" data-i18n="name">Your Name</label>
+                <input type="text" id="post-author" class="form-control" placeholder="Enter your name">
+            </div>
+            
+            <button class="btn btn-primary btn-block" onclick="createForumPost()" data-i18n="submit">Submit</button>
+        </div>
+    </div>
+
+    <!-- Profile Screen -->
+    <div id="profile-screen" class="screen" style="display: none;">
+        <div class="header">
+            <div class="logo">
+                <h1 data-i18n="profile">Profile</h1>
+            </div>
+            <div class="settings-btn">
+                <i class="fas fa-cog"></i>
+            </div>
+        </div>
+        
+        <div class="profile-info">
+            <div class="profile-avatar">
+                <i class="fas fa-user-circle fa-5x" style="color: var(--primary-color);"></i>
+            </div>
+            <h2 class="profile-name">John Farmer</h2>
+            <p class="profile-location">Pune, Maharashtra</p>
+        </div>
+        
+        <div class="category-menu">
+            <div class="category-item" data-i18n="myPosts">My Posts</div>
+            <div class="category-item" data-i18n="savedDiseases">Saved Diseases</div>
+            <div class="category-item" data-i18n="language">Language</div>
+            <div class="category-item" data-i18n="logout">Logout</div>
+        </div>
+        
+        <div class="language-selector">
+            <button class="language-btn active" data-lang="en">English</button>
+            <button class="language-btn" data-lang="hi">हिंदी</button>
+            <button class="language-btn" data-lang="mr">मराठी</button>
+        </div>
+    </div>
+{% endblock %}

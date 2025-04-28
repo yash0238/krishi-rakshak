@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none">
+  <rect width="512" height="512" fill="#E8F5E9"/>
+  <text x="256" y="256" font-family="Segoe UI, Arial, sans-serif" font-size="24px" fill="#4CAF50" text-anchor="middle" dominant-baseline="middle">Plant Disease Image</text>
+  <path d="M156 191C176.598 170.402 206.053 160 236 160C265.947 160 295.402 170.402 316 191C336.598 211.598 347 241.053 347 271C347 301.948 336.598 331.402 316 352" stroke="#4CAF50" stroke-width="8"/>
+  <path d="M256 191V416" stroke="#4CAF50" stroke-width="8"/>
+  <circle cx="256" cy="224" r="16" fill="#EF5350"/>
+  <circle cx="288" cy="256" r="16" fill="#EF5350"/>
+  <circle cx="256" cy="288" r="16" fill="#EF5350"/>
+</svg>

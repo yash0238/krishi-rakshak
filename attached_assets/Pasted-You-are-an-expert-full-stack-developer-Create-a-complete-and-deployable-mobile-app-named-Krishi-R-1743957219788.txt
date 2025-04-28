@@ -1,0 +1,65 @@
+You are an expert full-stack developer. Create a complete and deployable mobile app named **Krishi Rakshak** that helps rural users diagnose **plant and animal diseases** using **AI-powered image recognition**.
+
+### 📱 FRONTEND (Flutter):
+- Framework: Flutter (Dart)
+- Default Language: Marathi (with toggle for Hindi and English)
+- Home Screen:
+  - App name & tagline
+  - Buttons: “पौधे स्कॅन करा” (Scan Crop), “प्राणी स्कॅन करा” (Scan Animal)
+  - Weather widget (fetch current location & display weather)
+  - "Live Updates" button for image upload/capture
+- Other Screens:
+  - Disease result screen (image, disease name, symptoms, remedy, confidence %, with voice support)
+  - Common disease library (filterable list of diseases)
+  - Expert contact screen (static list of dummy contacts)
+  - Community forum (basic comments thread)
+  - Accessibility options: language toggle, text-to-speech, font size adjustment
+
+### 🤖 BACKEND (Python Flask):
+- Use Flask REST API
+- Endpoint `/predict`: accepts image, returns prediction result in JSON
+- Use a placeholder or pre-trained CNN model (plant or animal disease)
+- Return: `{ disease_name, symptoms, remedy, confidence_score }`
+- Store some disease info in PostgreSQL (or SQLite if easier in Replit)
+- Ensure CORS support for Flutter integration
+- Optional: add a `/diseases` endpoint to list all known diseases
+
+### 🌐 DEPLOYMENT:
+- Host backend on Replit or Render (public URL for API)
+- Integrate backend with Flutter app
+- Ensure the app runs in debug mode on emulator or device
+
+---
+
+### 📥 AFTER BUILDING THE APP, DO THIS FOR ME:
+
+Give me a **step-by-step beginner-friendly guide** for everything below:
+
+1. ✅ **Run the App**
+   - How to clone and open both frontend and backend
+   - How to run the backend API in Replit (or locally if needed)
+   - How to open the Flutter project in **Android Studio** and **VS Code**
+   - How to connect the API to Flutter (with URL and example test)
+   - All required commands: `flutter pub get`, `flask run`, etc.
+
+2. ✅ **Test and Debug**
+   - How to run the app on Android Emulator or real phone
+   - How to handle errors (camera access, file upload, location, etc.)
+   - If anything fails, give me clear fixes (permissions, dependencies, etc.)
+
+3. ✅ **Build and Download the App**
+   - How to generate the `.apk` file from Flutter
+   - How to install it on an Android phone (manual or USB)
+   - How to share the APK with others
+
+4. ✅ **Improve It Later**
+   - Suggest next steps to improve the app:
+     - Firebase auth
+     - Better AI model with training
+     - Offline mode
+     - Analytics
+     - Real-time crop/animal health alerts
+
+---
+
+💡 Assume I'm a student from India with basic coding skills. Keep instructions beginner-friendly, code well-documented, and use only tools that work smoothly on Replit or local setup. Don’t use Firebase unless I ask for it. Prefer open-source tools and APIs.

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishi Rakshak</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        {% block content %}{% endblock %}
+        
+        <div class="nav-icons">
+            <div class="nav-icon active" data-target="home">
+                <i class="fas fa-home"></i>
+                <span data-i18n="home">Home</span>
+            </div>
+            <div class="nav-icon" data-target="predict">
+                <i class="fas fa-camera"></i>
+                <span data-i18n="predict">Predict</span>
+            </div>
+            <div class="nav-icon" data-target="forum">
+                <i class="fas fa-comments"></i>
+                <span data-i18n="forum">Forum</span>
+            </div>
+            <div class="nav-icon" data-target="profile">
+                <i class="fas fa-user"></i>
+                <span data-i18n="profile">Profile</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
