@@ -1,7 +1,9 @@
 🌾 KrishiRakshak - AI for Rural Agriculture and Livestock Care
+
 Empowering rural communities with AI-driven plant and animal disease detection and farm management support.
 
 🚀 About the Project
+
 KrishiRakshak is a mobile-first platform designed to revolutionize rural agriculture by offering instant, AI-based diagnosis of plant and animal diseases.
 Built with accessibility in mind (default language Marathi 🇮🇳), the app bridges the gap between modern agricultural science and grassroots farming communities.
 
