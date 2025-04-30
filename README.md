@@ -32,6 +32,7 @@ It’s not just for farmers — it’s for everyone living in rural areas who de
 
 
 🧩 Architecture Overview
+
 ![image](https://github.com/user-attachments/assets/7a858de7-ca16-4a35-8542-a2afece61f72)   ![image](https://github.com/user-attachments/assets/f300ed6b-203f-4d31-a70f-c26f4585b440)   ![image](https://github.com/user-attachments/assets/0795d91b-50f5-4e99-ad30-1b72fd550ba3)   ![image](https://github.com/user-attachments/assets/05a316e9-420a-45fd-ab89-c4033eb188bc)
 
 
